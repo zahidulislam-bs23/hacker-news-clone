@@ -4,9 +4,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ShellComponent } from './components/shell/shell.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../@shared';
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent, ShellComponent],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SharedModule],
 })
 export class ShellModule {}

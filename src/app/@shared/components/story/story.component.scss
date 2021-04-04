@@ -13,15 +13,20 @@
       background-image: url(https://news.ycombinator.com/grayarrow2x.gif);
     }
     .title {
-      font-size: 13px;
-      color: #000000;
       padding-left: 2px;
+      a {
+        font-size: 13px;
+        color: #000000;
+        text-decoration: none;
+      }
     }
     .url {
-      font-size: 10px;
-      color: grey;
       padding-left: 5px;
-      margin-top: 2px;
+      a {
+        font-size: 10px;
+        color: grey;
+        text-decoration: none;
+      }
     }
   }
   .info {
