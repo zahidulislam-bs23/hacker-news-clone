@@ -13,11 +13,12 @@
       <a>ask |</a>
       <a>show |</a>
       <a>jobs |</a>
-      <a>submit</a>
+      <a routerLink="/submit">submit</a>
     </div>
   </div>
   <div class="profile">
-    <a>imzahidulislam |</a>
-    <a>logout</a>
+    <a *ngIf="credentials">{{ credentials.username }} |</a>
+    <a *ngIf="credentials" (click)="logOut()">logout</a>
+    <a *ngIf="!credentials" routerLink="/auth">login</a>
   </div>
 </div>

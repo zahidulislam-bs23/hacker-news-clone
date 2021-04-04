@@ -1,0 +1,23 @@
+<h2>Login</h2>
+<p *ngIf="error">{{ error }}</p>
+<form (ngSubmit)="login()" [formGroup]="loginForm">
+  <label for="fname">username:</label>
+  <input type="text" formControlName="username" /><br />
+  <label for="lname">password:</label>
+  <input type="password" formControlName="password" /><br /><br />
+  <input type="checkbox" formControlName="remember" />
+  <label for="fname">Remember me</label> <br /><br />
+
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+
+<h2>Create Account</h2>
+
+<form (ngSubmit)="signUp()" [formGroup]="signupForm">
+  <label for="fname">username:</label>
+  <input type="text" formControlName="username" /><br />
+  <label for="lname">password:</label>
+  <input type="password" formControlName="password" /><br /><br />
+
+  <button type="submit" [disabled]="signupForm.invalid">Create Account</button>
+</form>

@@ -18,13 +18,11 @@ export class LoadingHandlerInterceptor implements HttpInterceptor {
     this.totalRequests++;
     if (this.totalRequests === 1) {
       this.loadingService.showLoader();
-      console.log('************');
     }
     return next.handle(request).pipe(
       finalize(() => {
         this.totalRequests--;
         if (this.totalRequests === 0) {
-          console.log('#########');
           this.loadingService.dismissLoader();
         }
       })

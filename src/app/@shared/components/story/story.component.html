@@ -3,10 +3,10 @@
     <div class="serial">{{ serial }}.</div>
     <div class="upvote"></div>
     <div class="title">
-      <a [href]="story.url"> {{ story.title }} </a>
+      <a [href]="story.url" target="_blank"> {{ story.title }} </a>
     </div>
     <div class="url" *ngIf="story.domain">
-      <a [href]="story.url"> ({{ story.domain }}) </a>
+      <a [href]="story.url" target="_blank"> ({{ story.domain }}) </a>
     </div>
   </div>
   <div class="info">
