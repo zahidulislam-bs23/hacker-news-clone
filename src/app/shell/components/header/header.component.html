@@ -6,8 +6,8 @@
     </div>
     <div class="navs">
       <a>welcome |</a>
-      <a>new |</a>
-      <a>threads |</a>
+      <a routerLink="/newest">new |</a>
+      <a *ngIf="credentials">threads |</a>
       <a>past |</a>
       <a>comments |</a>
       <a>ask |</a>
