@@ -1,0 +1,9 @@
+<div class="home-wrapper">
+  <app-story
+    *ngFor="let item of news; let i = index"
+    [serial]="i + 1"
+    [story]="item"
+  ></app-story>
+
+  <div class="more" *ngIf="news.length > 0" (click)="LoadMore()">More</div>
+</div>
