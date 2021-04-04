@@ -1,0 +1,52 @@
+a {
+  color: #000000;
+}
+.header-wrapper {
+  background: #ff6600;
+  height: 24px;
+  display: flex;
+  font-size: 13px;
+  color: #000000;
+  .nav-wrapper {
+    display: flex;
+    width: 80vw;
+    word-wrap: break-word;
+    .logo {
+      display: flex;
+      height: 24px;
+      img {
+        height: 18px;
+        width: 18px;
+        border: 1px solid #ffffff;
+        margin: 2px;
+      }
+      .site-name {
+        margin: auto;
+        a {
+          margin: 2px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+    .navs {
+      display: flex;
+      a {
+        text-decoration: none;
+        margin: auto;
+        padding-left: 5px;
+      }
+    }
+  }
+  .profile {
+    width: 20vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+    a {
+      text-decoration: none;
+      padding-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.footer-wrapper {
+  height: 85px;
+  background: #f6f6ef;
+  border-top: 2px solid #ff6600;
+  padding: 10px;
+  .navs {
+    text-align: center;
+    color: grey;
+    a {
+      font-size: 11px;
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+}
