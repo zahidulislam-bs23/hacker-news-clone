@@ -9,6 +9,16 @@ const routes: Routes = [
       loadChildren: () =>
         import('./modules/home/home.module').then((m) => m.HomeModule),
     },
+    {
+      path: 'job',
+      loadChildren: () =>
+        import('./modules/job/job.module').then((m) => m.JobModule),
+    },
+    {
+      path: 'comment',
+      loadChildren: () =>
+        import('./modules/comment/comment.module').then((m) => m.CommentModule),
+    },
   ]),
   // Fallback when no prior route is matched
   { path: '**', redirectTo: '', pathMatch: 'full' },

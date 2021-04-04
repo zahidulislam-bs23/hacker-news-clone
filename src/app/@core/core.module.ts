@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 
-import { ErrorHandlerInterceptor } from './http/error-handler-interceptor.service';
+import { ErrorHandlerInterceptor } from './http/error-handler.interceptor';
+import { LoadingHandlerInterceptor } from './http/loading-handler.interceptor';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, RouterModule],
@@ -11,6 +12,11 @@ import { ErrorHandlerInterceptor } from './http/error-handler-interceptor.servic
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ErrorHandlerInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingHandlerInterceptor,
       multi: true,
     },
   ],

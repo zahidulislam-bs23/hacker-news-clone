@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ErrorHandlerInterceptor } from './error-handler-interceptor.service';
+import { ErrorHandlerInterceptor } from './error-handler.interceptor';
 
 describe('ErrorHandlerInterceptorService', () => {
   let service: ErrorHandlerInterceptor;

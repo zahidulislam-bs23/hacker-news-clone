@@ -1,0 +1,124 @@
+.loader-component {
+  z-index: 9999999;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+}
+.loader-wrapper {
+  position: fixed;
+  height: 180px;
+  width: 200px;
+  top: 40%;
+  left: 45%;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.loader-wrapper h1 {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.logo {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  top: 15%;
+  left: 30%;
+}
+
+.logo > img {
+  height: 80px;
+  width: 80px;
+}
+
+.loader {
+  top: 15%;
+  left: 30%;
+  position: absolute;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #1b1935; /* Blue */
+  border-left: 8px solid #1b1935; /* Blue */
+  border-bottom: 8px solid #1b1935; /* Blue */
+  border-right: 8px solid #1b1935; /* Blue */
+  border-right-width: 5px;
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.we-loading.we-loader {
+  display: block;
+}
+
+.we-loader {
+  z-index: 9999999;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: #e0e0e0;
+  /*background: rgba(255,255,255,0.8);*/
+  opacity: 0.9;
+  /*pointer-events: none;*/
+  position: fixed;
+}
+.disable-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+.we-loader-content {
+  width: 25em;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  border: 0;
+  box-shadow: 0 1px 1px -1px #fff;
+  height: auto;
+  margin: -2.6875em -13.1225em;
+  padding: 0.625em;
+  background-color: #fff;
+}
+
+.we-loader-content .we-icon-loading {
+  margin: 0 auto 0.625em;
+  opacity: 0.75;
+}
+
+.we-loader-content h1 {
+  text-align: center;
+}
+
+.we-loader .we-icon-loading {
+  display: block;
+  width: 2.75em;
+  height: 2.75em;
+  padding: 0.0625em;
+  -webkit-border-radius: 2.25em;
+  border-radius: 2.25em;
+}
+
+.we-icon-loading {
+  background-size: 2.875em 2.875em;
+}
