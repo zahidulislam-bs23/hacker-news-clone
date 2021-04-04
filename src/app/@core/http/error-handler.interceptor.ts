@@ -12,9 +12,6 @@ import { Logger } from '../services/logger.service';
 
 const log = new Logger('ErrorHandlerInterceptor');
 
-/**
- * Adds a default error handler to all requests.
- */
 @Injectable({
   providedIn: 'root',
 })
@@ -28,7 +25,6 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
       .pipe(catchError((error) => this.errorHandler(error)));
   }
 
-  // Customize the default error handler here if needed
   private errorHandler(response: HttpEvent<any>): Observable<HttpEvent<any>> {
     log.error('Request error', response);
     throw response;

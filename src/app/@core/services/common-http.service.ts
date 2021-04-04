@@ -38,4 +38,8 @@ export class CommonHttpService {
       )
       .toPromise();
   }
+
+  post(url: string, body: any) {
+    return this.http.post(url, body);
+  }
 }

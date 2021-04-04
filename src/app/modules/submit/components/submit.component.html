@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="logo">
+    <img src="https://news.ycombinator.com/y18.gif" />
+    <div class="title">Submit</div>
+  </div>
+</div>
+<div class="form-wrapper">
+  <p *ngIf="error">{{ error }}</p>
+  <form (ngSubmit)="createStory()" [formGroup]="storyForm">
+    <div class="input-wrapper">
+      <div class="label">title</div>
+      <input type="text" formControlName="title" />
+    </div>
+    <div class="input-wrapper">
+      <div class="label">url</div>
+      <input type="text" formControlName="url" />
+    </div>
+    <div class="label">or</div>
+    <div class="input-wrapper">
+      <div class="label">text</div>
+      <textarea formControlName="text" cols="50" rows="4"></textarea>
+    </div>
+
+    <button type="submit" [disabled]="storyForm.invalid">submit</button>
+  </form>
+
+  <p>
+    Leave url blank to submit a question for discussion. If there is no url, the
+    text (if any) will appear at the top of the thread.
+  </p>
+</div>
