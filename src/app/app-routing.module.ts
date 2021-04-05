@@ -21,9 +21,14 @@ const routes: Routes = [
         import('./modules/job/job.module').then((m) => m.JobModule),
     },
     {
-      path: 'comments',
+      path: 'ask',
       loadChildren: () =>
-        import('./modules/comment/comment.module').then((m) => m.CommentModule),
+        import('./modules/ask/ask.module').then((m) => m.AskModule),
+    },
+    {
+      path: 'show',
+      loadChildren: () =>
+        import('./modules/show/show.module').then((m) => m.ShowModule),
     },
   ]),
   {
