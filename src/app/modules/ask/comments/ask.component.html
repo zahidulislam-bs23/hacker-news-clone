@@ -1,0 +1,6 @@
+<app-ask
+  [ask]="ask"
+  [serial]="i + 1"
+  *ngFor="let ask of asks; let i = index"
+></app-ask>
+<app-load-more [data]="asks" (loadMore)="loadMore()"></app-load-more>
