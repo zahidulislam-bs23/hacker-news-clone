@@ -1,0 +1,8 @@
+<div class="shows-wrapper">
+  <app-show
+    *ngFor="let show of shows; let i = index"
+    [show]="show"
+    [serial]="i + 1"
+  ></app-show>
+  <app-load-more [data]="shows" (loadMore)="loadMore()"></app-load-more>
+</div>

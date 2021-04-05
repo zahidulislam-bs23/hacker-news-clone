@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShowComponent } from './show.component';
+import { ShowComponent } from './components/show.component';
 
 const routes: Routes = [{ path: '', component: ShowComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ShowRoutingModule { }
+export class ShowRoutingModule {}
