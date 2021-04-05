@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CommonHttpService } from 'src/app/@core/services/common-http.service';
-export interface IStory {
-  title: string;
-  url?: string;
-  text?: string;
-}
+import { IStory } from 'src/app/@shared/interfaces';
 @Injectable({
   providedIn: 'root',
 })

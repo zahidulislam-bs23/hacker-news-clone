@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { IStory } from 'src/app/@shared/interfaces';
 import { StoryService } from '../services/story.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { StoryService } from '../services/story.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  news = [];
+  stories: IStory[] = [];
   constructor(private newsService: StoryService, private router: Router) {}
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   async loadStoriesBasedOnRoute() {
-    this.news = await this.getStories();
+    this.stories = await this.getStories();
   }
 
   getStories(startFrom?: number) {
@@ -25,8 +26,8 @@ export class HomeComponent implements OnInit {
       : this.newsService.getTopStories(startFrom);
   }
 
-  async LoadMore() {
-    const news = await this.getStories(this.news.length + 1);
-    this.news = this.news.concat(news);
+  async loadMore() {
+    const news = await this.getStories(this.stories.length + 1);
+    this.stories = this.stories.concat(news);
   }
 }

@@ -1,14 +1,13 @@
 <div class="news-wrapper">
   <div class="news">
-    <div class="serial">1.</div>
-    <div class="upvote"></div>
-    <div class="title">Lorem ipsum dolor sit amet consectetur</div>
-    <div class="url">(github.com)</div>
+    <div class="title">
+      <a [href]="job.url" target="_blank"> {{ job.title }} </a>
+    </div>
+    <div class="url" *ngIf="job.domain">
+      <a [href]="job.url" target="_blank"> ({{ job.domain }}) </a>
+    </div>
   </div>
   <div class="info">
-    <div class="points">35 points by</div>
-    <div class="user">tosh</div>
-    <div class="time">2 hours ago</div>
-    <div class="comments">| hide | 3 comments</div>
+    <div class="time">{{ job.time | date: "shortTime" }}</div>
   </div>
 </div>

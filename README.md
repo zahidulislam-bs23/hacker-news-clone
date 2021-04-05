@@ -1,27 +1,25 @@
+## Developed By
+
+Name: Md. Zahidul Islam.
+Email: engg.zahidulislam@gmail.com
+Mobile: +880167063300
+LinkedIn: https://www.linkedin.com/in/engg-zahidul-islam
+
 # HackerNews
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+This project is Hacker News website clone.
 
-## Development server
+## Completed Module
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    1. Auth Module (Login & Signup with localStorage & SessionStorage)
+    2. New Past Stories List on Home Page.
+    3. Only Authenticated user can submit or create new Story.
+    4. Comment Module. List of Comments on Comments page
+    5. Job Module. List of Jobs on Jobs page
+    6. Show Module. List of show on show page
 
-## Code scaffolding
+## Running Project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Step 1: Go to the project directory and run `npm install`
+Step 2: To run to the project on you local machine run `ng serve -o` after running this command project will build
+and automatically you default browser will navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

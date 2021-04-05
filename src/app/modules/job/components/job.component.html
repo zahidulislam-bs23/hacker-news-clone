@@ -1,0 +1,4 @@
+<div class="jobs-wrapper">
+  <app-job *ngFor="let job of jobs" [job]="job"></app-job>
+  <app-load-more [data]="jobs" (loadMore)="loadMore()"></app-load-more>
+</div>

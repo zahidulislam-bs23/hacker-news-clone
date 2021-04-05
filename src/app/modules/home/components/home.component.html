@@ -1,9 +1,9 @@
 <div class="home-wrapper">
   <app-story
-    *ngFor="let item of news; let i = index"
+    *ngFor="let story of stories; let i = index"
     [serial]="i + 1"
-    [story]="item"
+    [story]="story"
   ></app-story>
 
-  <div class="more" *ngIf="news.length > 0" (click)="LoadMore()">More</div>
+  <app-load-more [data]="stories" (loadMore)="loadMore()"></app-load-more>
 </div>

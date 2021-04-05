@@ -9,22 +9,21 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class StoryService {
+  pageLimit: number = 29;
   constructor(private http: CommonHttpService) {}
 
   getNewStories(startFrom?: number) {
-    const limitTo = 29;
     let startAt = startFrom ? startFrom : 0;
     const endPoint = `newstories.json?print=pretty&startAt="${startAt}"&endAt="${
-      startAt + limitTo
+      startAt + this.pageLimit
     }"&orderBy="$key"`;
     return this.http.get(endPoint);
   }
 
   getTopStories(startFrom?: number) {
-    const limitTo = 29;
     let startAt = startFrom ? startFrom : 0;
     const endPoint = `topstories.json?print=pretty&startAt="${startAt}"&endAt="${
-      startAt + limitTo
+      startAt + this.pageLimit
     }"&orderBy="$key"`;
     return this.http.get(endPoint);
   }
