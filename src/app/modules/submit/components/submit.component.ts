@@ -35,7 +35,7 @@ export class SubmitComponent implements OnInit {
         this.router.navigate(['/newest']);
       },
       (err) => {
-        this.error = 'Something went wrong! Please try again';
+        this.error = '* Something went wrong! Please try again';
       }
     );
   }

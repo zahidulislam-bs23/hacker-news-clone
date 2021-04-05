@@ -33,7 +33,7 @@ export class AuthenticationService {
       this.credentialsService.setCredentials(data, context.remember);
       return of(data);
     } else {
-      return throwError({ message: 'Wrong username or password' });
+      return throwError({ message: '* Wrong username or password' });
     }
   }
 
