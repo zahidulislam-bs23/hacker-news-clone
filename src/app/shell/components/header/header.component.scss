@@ -8,7 +8,7 @@ a {
   color: #000000;
   .nav-wrapper {
     display: flex;
-    width: 80vw;
+    width: 80%;
     word-wrap: break-word;
     .logo {
       display: flex;
@@ -38,7 +38,7 @@ a {
     }
   }
   .profile {
-    width: 20vw;
+    width: 20%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -47,5 +47,20 @@ a {
       text-decoration: none;
       padding-left: 5px;
     }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    .nav-wrapper {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .nav-wrapper {
+    flex-direction: column;
   }
 }
